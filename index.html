@@ -1,14 +1,17 @@
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>WC 2026 Fantasy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--red:#C8102E;--rl:#fdf0f2;--rm:#f5c6cc;--green:#006847;--gl:#edf7f3;--gm:#9fd3bf;--blue:#002868;--bl:#edf1f9;--bm:#9aaed4;--off:#f9f9f9;--t:#1a1a1a;--t2:#555;--t3:#888;--br:#e8e8e8}
-body,html{font-family:'Inter',sans-serif;background:#fff;color:var(--t)}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.app{max-width:480px;margin:0 auto;background:#fff}
+body{font-family:'Inter',sans-serif;background:#f0f0f0;color:var(--t);min-height:100vh}
+.app{max-width:480px;margin:0 auto;background:#fff;min-height:100vh;box-shadow:0 0 40px rgba(0,0,0,0.12)}
 .nav{display:flex;background:var(--blue);position:sticky;top:0;z-index:100}
 .nb{flex:1;padding:11px 4px 9px;background:none;border:none;border-bottom:3px solid transparent;color:rgba(255,255,255,0.5);font-size:10px;font-weight:600;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;font-family:'Inter',sans-serif;text-transform:uppercase;letter-spacing:0.3px}
-.nb i{font-size:19px}
 .nb.active{color:#fff;border-bottom-color:var(--red)}
 .hero{background:var(--blue);padding:24px 20px 20px;text-align:center;border-bottom:4px solid var(--red)}
 .eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;letter-spacing:2px;color:rgba(255,255,255,0.6);text-transform:uppercase;margin-bottom:6px}
@@ -49,7 +52,7 @@ body,html{font-family:'Inter',sans-serif;background:#fff;color:var(--t)}
 .slot{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;border:1.5px dashed var(--br);background:#fafafa;min-height:48px}
 .slot.filled{border-style:solid;border-color:var(--br);background:#fff}
 .sn{font-size:11px;font-weight:700;color:var(--t3);width:16px;text-align:center;flex-shrink:0}
-.sf{font-size:22px;flex-shrink:0}
+.sf2{font-size:22px;flex-shrink:0}
 .si{flex:1;min-width:0}
 .sname{font-size:13px;font-weight:600;color:var(--t)}
 .ssub{font-size:11px;color:var(--t3)}
@@ -67,20 +70,19 @@ body,html{font-family:'Inter',sans-serif;background:#fff;color:var(--t)}
 .srow{display:flex;gap:5px;padding:8px 18px;border-top:0.5px solid var(--br)}
 .sbn{flex:1;padding:7px 4px;border-radius:7px;border:1.5px solid var(--br);background:#fff;font-size:10px;font-weight:700;color:var(--t2);cursor:pointer;font-family:'Inter',sans-serif;display:flex;align-items:center;justify-content:center;gap:3px}
 .sbn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
-.sbn i{font-size:12px}
-.tlist{max-height:360px;overflow-y:auto;border-top:0.5px solid var(--br)}
+.tlist{max-height:380px;overflow-y:auto;border-top:0.5px solid var(--br)}
 .ti{display:flex;align-items:center;padding:10px 18px;border-bottom:0.5px solid var(--br);cursor:pointer;gap:11px;transition:background 0.12s}
 .ti:hover{background:var(--off)}
 .ti.sel{background:var(--gl)}
 .ti.dis{opacity:0.38;cursor:not-allowed}
-.tf{font-size:22px;flex-shrink:0}
+.tf2{font-size:22px;flex-shrink:0}
 .tinfo{flex:1;min-width:0}
 .tn{font-size:13px;font-weight:600;color:var(--t)}
 .tm{font-size:11px;color:var(--t3);margin-top:1px;display:flex;align-items:center;gap:5px}
-.tp2{font-size:10px;color:var(--t3);margin-top:2px}
-.tr{text-align:right;flex-shrink:0}
+.tpct{font-size:10px;color:var(--t3);margin-top:2px}
+.tright{text-align:right;flex-shrink:0}
 .tsal{font-size:13px;font-weight:700;color:var(--green)}
-.tck{font-size:16px;color:var(--green);display:block;text-align:right;margin-top:2px}
+.tck{font-size:16px;color:var(--green);display:block;text-align:right;margin-top:2px;font-weight:700}
 .pill{font-size:9px;padding:2px 6px;border-radius:3px;font-weight:700}
 .p1{background:#fdf0f2;color:#8b000a}.p2{background:#edf1f9;color:#002868}.p3{background:#edf7f3;color:#004d34}.p4{background:#fff5ee;color:#7a3200}.p5{background:#f3edf9;color:#3d1a6e}
 .subbtn{display:block;width:calc(100% - 36px);margin:14px 18px;padding:15px;background:var(--red);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase}
@@ -90,7 +92,7 @@ body,html{font-family:'Inter',sans-serif;background:#fff;color:var(--t)}
 .msg.ok{background:var(--gl);color:#004d34;display:block;border:1px solid var(--gm)}
 .msg.err{background:var(--rl);color:#8b000a;display:block;border:1px solid var(--rm)}
 .scw{margin:0 18px 16px;border:0.5px solid var(--br);border-radius:12px;overflow:hidden}
-.sch{background:var(--blue);padding:10px 14px;display:flex;align-items:center;gap:8px}
+.sch{background:var(--blue);padding:10px 14px;}
 .sch span{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:#fff;letter-spacing:0.5px}
 .scr{display:flex;align-items:center;padding:9px 14px;border-bottom:0.5px solid var(--br)}
 .scr:last-child{border-bottom:none}
@@ -127,7 +129,6 @@ body,html{font-family:'Inter',sans-serif;background:#fff;color:var(--t)}
 .lbpts{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;color:var(--t);line-height:1}
 .lbpl{font-size:10px;color:var(--t3);font-weight:600;text-transform:uppercase}
 .empty{text-align:center;padding:48px 20px;color:var(--t3)}
-.empty i{font-size:44px;margin-bottom:12px;display:block}
 .myh{background:var(--blue);padding:20px;text-align:center;border-bottom:4px solid var(--green)}
 .myh h2{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:700;color:#fff}
 .myh p{font-size:12px;color:rgba(255,255,255,0.65);margin-top:4px}
@@ -174,18 +175,18 @@ body,html{font-family:'Inter',sans-serif;background:#fff;color:var(--t)}
 .plrow:last-child{border-bottom:none}
 .plchips{display:flex;flex-wrap:wrap;gap:3px;width:100%;margin-top:6px}
 .plchip{font-size:10px;background:var(--off);border:0.5px solid var(--br);border-radius:4px;padding:2px 6px;color:var(--t2)}
-.delbtn{background:none;border:1.5px solid var(--rm);color:var(--red);border-radius:6px;padding:5px 9px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:4px;flex-shrink:0;white-space:nowrap}
+.delbtn{background:none;border:1.5px solid var(--rm);color:var(--red);border-radius:6px;padding:5px 9px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;flex-shrink:0}
 .delbtn:hover{background:var(--rl)}
+.loading{text-align:center;padding:30px;color:var(--t3);font-size:13px}
 </style>
-
-<h2 class="sr-only">2026 FIFA World Cup Salary Cap Fantasy — Pick 6 teams within a $50,000 cap and compete for prizes</h2>
-
+</head>
+<body>
 <div class="app">
 <nav class="nav">
-  <button class="nb active" onclick="showPage('pick')" id="nav-pick"><i class="ti ti-list-check" aria-hidden="true"></i>Pick Teams</button>
-  <button class="nb" onclick="showPage('lb')" id="nav-lb"><i class="ti ti-trophy" aria-hidden="true"></i>Leaderboard</button>
-  <button class="nb" onclick="showPage('my')" id="nav-my"><i class="ti ti-user" aria-hidden="true"></i>My Entry</button>
-  <button class="nb" onclick="showPage('admin')" id="nav-admin"><i class="ti ti-settings" aria-hidden="true"></i>Admin</button>
+  <button class="nb active" onclick="showPage('pick')" id="nav-pick">⚽<br>Pick Teams</button>
+  <button class="nb" onclick="showPage('lb')" id="nav-lb">🏆<br>Leaderboard</button>
+  <button class="nb" onclick="showPage('my')" id="nav-my">👤<br>My Entry</button>
+  <button class="nb" onclick="showPage('admin')" id="nav-admin">⚙️<br>Admin</button>
 </nav>
 
 <div id="page-pick" class="page active">
@@ -201,7 +202,7 @@ body,html{font-family:'Inter',sans-serif;background:#fff;color:var(--t)}
     <div class="vi">💵</div>
     <div class="vt"><strong>Want to play for money?</strong>Venmo $20 before submitting. Non-paying entries are welcome but ineligible for prizes.<span class="vtag">@Maxadams11</span></div>
   </div>
-  <div class="sh"><div class="acc ag"></div><h3>Your info</h3></div>
+  <div class="sh"><div class="acc ab"></div><h3>Your info</h3></div>
   <div class="card">
     <label class="fl">Your name</label>
     <input class="fi" id="pname" type="text" placeholder="First-Last" oninput="chkName()"/>
@@ -221,16 +222,16 @@ body,html{font-family:'Inter',sans-serif;background:#fff;color:var(--t)}
   <div class="searchb"><input type="text" placeholder="Search teams..." oninput="ftms()" id="tsearch"/></div>
   <div class="frow" id="gfilters"></div>
   <div class="srow">
-    <button class="sbn active" onclick="setSort('sd',this)"><i class="ti ti-arrow-down" aria-hidden="true"></i>Price ↓</button>
-    <button class="sbn" onclick="setSort('sa',this)"><i class="ti ti-arrow-up" aria-hidden="true"></i>Price ↑</button>
-    <button class="sbn" onclick="setSort('na',this)"><i class="ti ti-a-b" aria-hidden="true"></i>A–Z</button>
-    <button class="sbn" onclick="setSort('gr',this)"><i class="ti ti-list" aria-hidden="true"></i>Group</button>
+    <button class="sbn active" onclick="setSort('sd',this)">Price ↓</button>
+    <button class="sbn" onclick="setSort('sa',this)">Price ↑</button>
+    <button class="sbn" onclick="setSort('na',this)">A–Z</button>
+    <button class="sbn" onclick="setSort('gr',this)">Group</button>
   </div>
   <div class="tlist" id="tlist"></div>
-  <button class="subbtn" id="subbtn" onclick="submit()" disabled>Submit Picks</button>
+  <button class="subbtn" id="subbtn" onclick="submitPicks()" disabled>Submit Picks</button>
   <div class="msg" id="smsg"></div>
   <div class="scw">
-    <div class="sch"><i class="ti ti-chart-bar" style="font-size:18px;color:rgba(255,255,255,0.8)" aria-hidden="true"></i><span>Scoring Rules</span></div>
+    <div class="sch"><span>Scoring Rules</span></div>
     <div class="scr hdr"><span>Group Stage</span></div>
     <div class="scr"><span class="scl">Win</span><span class="scp r">+5</span></div>
     <div class="scr"><span class="scl">Draw</span><span class="scp b">+2</span></div>
@@ -253,7 +254,7 @@ body,html{font-family:'Inter',sans-serif;background:#fff;color:var(--t)}
     <div class="pz"><div class="pzpl">🥉</div><div class="pzamt" id="p3">$0</div><div class="pzpct">10%</div></div>
   </div>
   <div class="poolbar"><span>Total prize pool</span><strong id="pool">$0</strong></div>
-  <div id="lblist"></div>
+  <div id="lblist"><div class="loading">Loading leaderboard...</div></div>
 </div>
 
 <div id="page-my" class="page">
@@ -266,7 +267,7 @@ body,html{font-family:'Inter',sans-serif;background:#fff;color:var(--t)}
     <div id="lkres" style="margin-top:12px"></div>
   </div>
   <div class="sh" style="padding-top:4px"><div class="acc ar"></div><h3>Drafted %</h3></div>
-  <div class="dpts" id="dptlist"></div>
+  <div class="dpts" id="dptlist"><div class="loading">Loading...</div></div>
 </div>
 
 <div id="page-admin" class="page">
@@ -314,6 +315,14 @@ body,html{font-family:'Inter',sans-serif;background:#fff;color:var(--t)}
 </div>
 
 <script>
+const SB_URL='https://yfpayocjjycnqnwqqlko.supabase.co';
+const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmcGF5b2NqanljbnFud3FxbGtvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA5NjI1ODYsImV4cCI6MjA5NjUzODU4Nn0.Az7p57CXW7t67k_A45ULe1ySmnq0XSIPjBQDGm8vHpo';
+const H={'Content-Type':'application/json','apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY};
+
+async function sbGet(t,p=''){const r=await fetch(`${SB_URL}/rest/v1/${t}?${p}`,{headers:{...H,'Prefer':'return=representation'}});return r.json();}
+async function sbUpsert(t,d){const r=await fetch(`${SB_URL}/rest/v1/${t}`,{method:'POST',headers:{...H,'Prefer':'resolution=merge-duplicates,return=representation'},body:JSON.stringify(d)});return r.json();}
+async function sbDelete(t,f){await fetch(`${SB_URL}/rest/v1/${t}?${f}`,{method:'DELETE',headers:{...H,'Prefer':'return=representation'}});}
+
 const TEAMS=[
   {name:"Spain",flag:"🇪🇸",group:"H",salary:13000,tier:1},{name:"France",flag:"🇫🇷",group:"I",salary:12500,tier:1},
   {name:"England",flag:"🏴󠁧󠁢󠁥󠁮󠁧󠁿",group:"L",salary:11500,tier:1},{name:"Brazil",flag:"🇧🇷",group:"C",salary:11000,tier:1},
@@ -340,31 +349,33 @@ const TEAMS=[
   {name:"Jordan",flag:"🇯🇴",group:"J",salary:2000,tier:5},{name:"DR Congo",flag:"🇨🇩",group:"K",salary:2000,tier:5},
   {name:"Uzbekistan",flag:"🇺🇿",group:"K",salary:2000,tier:5},{name:"Panama",flag:"🇵🇦",group:"L",salary:2000,tier:5},
 ];
+
 const CAP=50000,MAX=6,LOCK=new Date("2026-06-11T18:00:00Z"),PW="England2026";
 const TL=["","ELITE","STRONG","GOOD","MID","VALUE"],TC=["","p1","p2","p3","p4","p5"];
-let ST={picks:[],entries:{},scores:{},ko:{},elim:{}};
+let picks=[],dbEntries=[],dbScores={},dbKO={},dbElim={};
 let gF="ALL",sV="",sM="sd";
-function sid(n){return"x"+n.replace(/[^a-zA-Z0-9]/g,"_");}
+
 function locked(){return new Date()>=LOCK;}
 
-async function load(){
-  try{
-    for(const k of["entries","scores","ko","elim"]){
-      const r=await window.storage.get(k,true);
-      if(r&&r.value)try{ST[k]=JSON.parse(r.value);}catch(e){}
-    }
-  }catch(e){}
+async function loadAll(){
+  const [entries,scores,ko,elim]=await Promise.all([sbGet('entries','order=created_at.asc'),sbGet('scores'),sbGet('knockout'),sbGet('eliminated')]);
+  dbEntries=Array.isArray(entries)?entries:[];
+  dbScores={};(Array.isArray(scores)?scores:[]).forEach(r=>{dbScores[r.team_name]={w:r.w,d:r.d,l:r.l,gf:r.gf};});
+  dbKO={};(Array.isArray(ko)?ko:[]).forEach(r=>{dbKO[r.team_name]={r32:r.r32,r16:r.r16,qf:r.qf,sf:r.sf,champ:r.champ};});
+  dbElim={};(Array.isArray(elim)?elim:[]).forEach(r=>{if(r.is_eliminated)dbElim[r.team_name]=true;});
   renderAll();
 }
-async function ps(k){try{await window.storage.set(k,JSON.stringify(ST[k]),true);}catch(e){}}
 
 function showPage(p){
   document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));
   document.querySelectorAll(".nb").forEach(x=>x.classList.remove("active"));
   document.getElementById("page-"+p).classList.add("active");
   document.getElementById("nav-"+p).classList.add("active");
-  if(p==="lb")renderLB();
-  if(p==="my")renderDP();
+  loadAll().then(()=>{
+    if(p==="lb")renderLB();
+    if(p==="my")renderDP();
+    if(p==="pick")renderList();
+  });
 }
 
 function chkName(){
@@ -374,8 +385,8 @@ function chkName(){
 }
 
 function updCap(){
-  const used=ST.picks.reduce((s,t)=>s+t.salary,0);
-  const rem=CAP-used,picks=ST.picks.length,left=MAX-picks;
+  const used=picks.reduce((s,t)=>s+t.salary,0);
+  const rem=CAP-used,n=picks.length,left=MAX-n;
   document.getElementById("cu").textContent="$"+used.toLocaleString();
   document.getElementById("cr").textContent="$"+rem.toLocaleString();
   document.getElementById("ca").textContent=left>0?"$"+Math.round(rem/left).toLocaleString():"—";
@@ -383,9 +394,9 @@ function updCap(){
   const b=document.getElementById("cbar");
   b.style.width=pct+"%";
   b.className="cbf"+(used>CAP?" over":used/CAP>0.85?" warn":"");
-  document.getElementById("rcount").textContent=`(${picks}/${MAX})`;
-  const n=document.getElementById("pname").value.trim();
-  document.getElementById("subbtn").disabled=!(n.length>0&&picks===MAX&&used<=CAP&&!locked());
+  document.getElementById("rcount").textContent=`(${n}/${MAX})`;
+  const nm=document.getElementById("pname").value.trim();
+  document.getElementById("subbtn").disabled=!(nm.length>0&&n===MAX&&used<=CAP&&!locked());
   document.getElementById("lkdbanner").style.display=locked()?"block":"none";
 }
 
@@ -410,23 +421,23 @@ function getSorted(list){
 
 function renderList(){
   const list=document.getElementById("tlist");
-  const total=Object.keys(ST.entries).length;
-  const cnts={};Object.values(ST.entries).forEach(e=>e.picks.forEach(p=>{cnts[p.name]=(cnts[p.name]||0)+1;}));
+  const total=dbEntries.length;
+  const cnts={};dbEntries.forEach(e=>{(e.picks||[]).forEach(p=>{cnts[p.name]=(cnts[p.name]||0)+1;});});
   const filtered=TEAMS.filter(t=>(gF==="ALL"||t.group===gF)&&(!sV||t.name.toLowerCase().includes(sV)));
   list.innerHTML="";
   getSorted(filtered).forEach(t=>{
-    const sel=ST.picks.some(p=>p.name===t.name);
-    const used=ST.picks.reduce((s,p)=>s+p.salary,0);
-    const dis=!sel&&(ST.picks.length>=MAX||(used+t.salary>CAP));
+    const sel=picks.some(p=>p.name===t.name);
+    const used=picks.reduce((s,p)=>s+p.salary,0);
+    const dis=!sel&&(picks.length>=MAX||(used+t.salary>CAP));
     const cnt=cnts[t.name]||0,pct=total>0?Math.round(cnt/total*100):0;
     const d=document.createElement("div");
     d.className="ti"+(sel?" sel":"")+(dis?" dis":"");
-    d.innerHTML=`<span class="tf">${t.flag}</span>
+    d.innerHTML=`<span class="tf2">${t.flag}</span>
       <div class="tinfo"><div class="tn">${t.name}</div>
         <div class="tm">Group ${t.group} <span class="pill ${TC[t.tier]}">${TL[t.tier]}</span></div>
-        <div class="tp2">${total>0?pct+"% drafted ("+cnt+" entries)":"No entries yet"}</div>
+        <div class="tpct">${total>0?pct+"% drafted ("+cnt+" entries)":"No entries yet"}</div>
       </div>
-      <div class="tr"><div class="tsal">$${t.salary.toLocaleString()}</div>${sel?'<i class="ti ti-check tck" aria-hidden="true"></i>':''}</div>`;
+      <div class="tright"><div class="tsal">$${t.salary.toLocaleString()}</div>${sel?'<span class="tck">✓</span>':''}</div>`;
     if(!dis)d.onclick=()=>tog(t);
     list.appendChild(d);
   });
@@ -434,91 +445,96 @@ function renderList(){
 
 function tog(t){
   if(locked())return;
-  const idx=ST.picks.findIndex(p=>p.name===t.name);
-  if(idx>=0)ST.picks.splice(idx,1);
-  else{if(ST.picks.length>=MAX)return;if(ST.picks.reduce((s,p)=>s+p.salary,0)+t.salary>CAP)return;ST.picks.push(t);}
+  const idx=picks.findIndex(p=>p.name===t.name);
+  if(idx>=0)picks.splice(idx,1);
+  else{if(picks.length>=MAX)return;if(picks.reduce((s,p)=>s+p.salary,0)+t.salary>CAP)return;picks.push(t);}
   renderRoster();renderList();updCap();
 }
 
 function renderRoster(){
   const w=document.getElementById("rslots");w.innerHTML="";
   for(let i=0;i<MAX;i++){
-    const t=ST.picks[i];const d=document.createElement("div");
+    const t=picks[i];const d=document.createElement("div");
     d.className="slot"+(t?" filled":"");
-    if(t)d.innerHTML=`<span class="sn">${i+1}</span><span class="sf">${t.flag}</span><div class="si"><div class="sname">${t.name}</div><div class="ssub">Group ${t.group}</div></div><span class="ssal">$${t.salary.toLocaleString()}</span><button class="srm" onclick="rmTeam(${i})" aria-label="Remove"><i class="ti ti-x" aria-hidden="true"></i></button>`;
+    if(t)d.innerHTML=`<span class="sn">${i+1}</span><span class="sf2">${t.flag}</span><div class="si"><div class="sname">${t.name}</div><div class="ssub">Group ${t.group}</div></div><span class="ssal">$${t.salary.toLocaleString()}</span><button class="srm" onclick="rmTeam(${i})">✕</button>`;
     else d.innerHTML=`<span class="sn">${i+1}</span><span class="semp">Empty slot</span>`;
     w.appendChild(d);
   }
 }
 
-function rmTeam(i){if(locked())return;ST.picks.splice(i,1);renderRoster();renderList();updCap();}
+function rmTeam(i){if(locked())return;picks.splice(i,1);renderRoster();renderList();updCap();}
 
-async function submit(){
+async function submitPicks(){
   const name=document.getElementById("pname").value.trim();
-  if(!name||ST.picks.length!==MAX)return;
+  if(!name||picks.length!==MAX)return;
   if(locked()){showMsg("smsg","err","Picks are locked.");return;}
-  if(ST.entries[name]){showMsg("smsg","err","This name already has a submission.");return;}
-  ST.entries[name]={picks:[...ST.picks],salary:ST.picks.reduce((s,t)=>s+t.salary,0),paid:false};
-  await ps("entries");
+  if(dbEntries.find(e=>e.name===name)){showMsg("smsg","err","This name already has a submission.");return;}
+  document.getElementById("subbtn").disabled=true;
+  document.getElementById("subbtn").textContent="Submitting...";
+  await sbUpsert('entries',{name,picks,salary:picks.reduce((s,t)=>s+t.salary,0),paid:false});
+  await loadAll();
   showMsg("smsg","ok","✅ Picks submitted! Good luck, "+name+"!");
-  ST.picks=[];renderRoster();renderList();updCap();
+  picks=[];renderRoster();renderList();updCap();
   document.getElementById("pname").value="";
+  document.getElementById("subbtn").textContent="Submit Picks";
 }
 
 function showMsg(id,type,text){
   const el=document.getElementById(id);if(!el)return;
   el.className="msg "+type;el.textContent=text;el.style.display="block";
-  setTimeout(()=>{el.style.display="none";},3500);
+  setTimeout(()=>{el.style.display="none";},4000);
 }
 
 function calcPts(entry){
-  return entry.picks.reduce((tot,t)=>{
-    const s=ST.scores[t.name]||{w:0,d:0,l:0,gf:0};
-    const k=ST.ko[t.name]||{r32:0,r16:0,qf:0,sf:0,champ:0};
+  return (entry.picks||[]).reduce((tot,t)=>{
+    const s=dbScores[t.name]||{w:0,d:0,l:0,gf:0};
+    const k=dbKO[t.name]||{r32:0,r16:0,qf:0,sf:0,champ:0};
     return tot+s.w*5+s.d*2+s.gf*0.5+k.r32*5+k.r16*10+k.qf*15+k.sf*20+k.champ*30;
   },0);
 }
+
 function tPts(t){
-  const s=ST.scores[t.name]||{w:0,d:0,l:0,gf:0};
-  const k=ST.ko[t.name]||{r32:0,r16:0,qf:0,sf:0,champ:0};
+  const s=dbScores[t.name]||{w:0,d:0,l:0,gf:0};
+  const k=dbKO[t.name]||{r32:0,r16:0,qf:0,sf:0,champ:0};
   return s.w*5+s.d*2+s.gf*0.5+k.r32*5+k.r16*10+k.qf*15+k.sf*20+k.champ*30;
 }
 
 function renderLB(){
-  const paid=Object.values(ST.entries).filter(e=>e.paid).length;
+  const paid=dbEntries.filter(e=>e.paid).length;
   const pool=paid*20;
   document.getElementById("pool").textContent="$"+pool.toLocaleString();
   document.getElementById("p1").textContent="$"+Math.floor(pool*.65).toLocaleString();
   document.getElementById("p2").textContent="$"+Math.floor(pool*.25).toLocaleString();
   document.getElementById("p3").textContent="$"+Math.floor(pool*.10).toLocaleString();
-  const sorted=Object.entries(ST.entries).map(([n,e])=>({n,e,pts:calcPts(e)})).sort((a,b)=>b.pts-a.pts);
+  const sorted=[...dbEntries].map(e=>({e,pts:calcPts(e)})).sort((a,b)=>b.pts-a.pts);
   const list=document.getElementById("lblist");
-  if(!sorted.length){list.innerHTML=`<div class="empty"><i class="ti ti-users" aria-hidden="true"></i><p>No entries yet — be the first!</p></div>`;return;}
+  if(!sorted.length){list.innerHTML=`<div class="empty"><p>No entries yet — be the first!</p></div>`;return;}
   list.innerHTML="";
   sorted.forEach((item,i)=>{
     const sym=i===0?"🥇":i===1?"🥈":i===2?"🥉":`#${i+1}`;
     const pb=item.e.paid?'<span class="bpd">💰 PAID</span>':'<span class="bfr">FREE</span>';
-    const chips=item.e.picks.map(t=>`<span class="lbc${ST.elim[t.name]?" elim":""}">${t.flag} ${t.name}</span>`).join("");
+    const chips=(item.e.picks||[]).map(t=>`<span class="lbc${dbElim[t.name]?" elim":""}">${t.flag} ${t.name}</span>`).join("");
     const d=document.createElement("div");d.className="lbe";
     d.innerHTML=`<div class="lbrk">${sym}</div>
-      <div class="lbb"><div class="lbnr"><span class="lbn">${item.n}</span>${pb}</div>
+      <div class="lbb"><div class="lbnr"><span class="lbn">${item.e.name}</span>${pb}</div>
         <div class="lbcs">${chips}</div><div class="lbmt">$${item.e.salary.toLocaleString()} used</div></div>
       <div class="lbpc"><div class="lbpts">${item.pts.toFixed(1)}</div><div class="lbpl">pts</div></div>`;
     list.appendChild(d);
   });
 }
 
-function lookup(){
+async function lookup(){
   const name=document.getElementById("lkname").value.trim();
   const res=document.getElementById("lkres");
-  const entry=ST.entries[name];
+  await loadAll();
+  const entry=dbEntries.find(e=>e.name===name);
   if(!entry){res.innerHTML=`<p style="font-size:13px;color:var(--t3);margin-top:8px">No entry found for "${name}".</p>`;return;}
   const pts=calcPts(entry);
-  const sorted=Object.entries(ST.entries).map(([n,e])=>({n,pts:calcPts(e)})).sort((a,b)=>b.pts-a.pts);
+  const sorted=[...dbEntries].map(e=>({n:e.name,pts:calcPts(e)})).sort((a,b)=>b.pts-a.pts);
   const rank=sorted.findIndex(x=>x.n===name)+1;
-  const rows=entry.picks.map(t=>{
-    const tp=tPts(t),e2=ST.elim[t.name];
-    const st=e2?'<span class="ste">🔴 Eliminated</span>':'<span class="sta">🟢 Active</span>';
+  const rows=(entry.picks||[]).map(t=>{
+    const tp=tPts(t),elim=dbElim[t.name];
+    const st=elim?'<span class="ste">🔴 Eliminated</span>':'<span class="sta">🟢 Active</span>';
     return `<div class="mtr"><span style="font-size:22px">${t.flag}</span>
       <div style="flex:1"><div style="font-size:13px;font-weight:700;color:var(--t)">${t.name}</div><div style="font-size:11px;color:var(--t3)">Group ${t.group} · $${t.salary.toLocaleString()}</div></div>
       <div style="text-align:right">${st}<div style="font-size:13px;font-weight:700;color:var(--green);margin-top:3px">${tp.toFixed(1)} pts</div></div></div>`;
@@ -527,8 +543,8 @@ function lookup(){
 }
 
 function renderDP(){
-  const total=Object.keys(ST.entries).length;
-  const cnts={};Object.values(ST.entries).forEach(e=>e.picks.forEach(t=>{cnts[t.name]=(cnts[t.name]||0)+1;}));
+  const total=dbEntries.length;
+  const cnts={};dbEntries.forEach(e=>(e.picks||[]).forEach(t=>{cnts[t.name]=(cnts[t.name]||0)+1;}));
   const sorted=[...TEAMS].sort((a,b)=>(cnts[b.name]||0)-(cnts[a.name]||0)).filter(t=>cnts[t.name]);
   const list=document.getElementById("dptlist");
   if(!total||!sorted.length){list.innerHTML=`<p style="font-size:13px;color:var(--t3);padding:12px 0">No entries yet.</p>`;return;}
@@ -545,7 +561,7 @@ function aLogin(){
   if(document.getElementById("apw").value===PW){
     document.getElementById("alogwrap").style.display="none";
     document.getElementById("acontent").style.display="block";
-    renderAS();renderAKO();renderAP();renderAE();
+    loadAll().then(()=>{renderAS();renderAKO();renderAP();renderAE();});
   }else showMsg("amsg","err","Incorrect password.");
 }
 
@@ -555,9 +571,11 @@ function aTab(tab,btn){
   document.getElementById("ap-"+tab).classList.add("active");btn.classList.add("active");
 }
 
+function sid(n){return"x"+n.replace(/[^a-zA-Z0-9]/g,"_");}
+
 function renderAS(){
   document.getElementById("scorelist").innerHTML=TEAMS.map(t=>{
-    const s=ST.scores[t.name]||{w:0,d:0,l:0,gf:0};const id=sid(t.name);
+    const s=dbScores[t.name]||{w:0,d:0,l:0,gf:0};const id=sid(t.name);
     return `<div class="atr"><span style="font-size:18px">${t.flag}</span><span class="atn">${t.name}</span>
       <div class="sins">
         <div><span class="slb">W</span><input type="number" min="0" max="3" value="${s.w}" id="sw-${id}"/></div>
@@ -570,22 +588,21 @@ function renderAS(){
 
 function renderAKO(){
   document.getElementById("kolist").innerHTML=TEAMS.map(t=>{
-    const k=ST.ko[t.name]||{r32:0,r16:0,qf:0,sf:0,champ:0};const id=sid(t.name);
+    const k=dbKO[t.name]||{r32:0,r16:0,qf:0,sf:0,champ:0};const id=sid(t.name);
     return `<div class="atr"><span style="font-size:18px">${t.flag}</span><span class="atn">${t.name}</span>
       <div class="koc">${[["r32","R32"],["r16","R16"],["qf","QF"],["sf","SF"],["champ","Champ"]].map(([r,l])=>`<label class="kc"><input type="checkbox" id="ko-${r}-${id}" ${k[r]?"checked":""}/>${l}</label>`).join("")}</div></div>`;
   }).join("");
 }
 
 function renderAP(){
-  const entries=Object.entries(ST.entries);
   const list=document.getElementById("pllist");
-  if(!entries.length){list.innerHTML=`<div style="padding:14px;font-size:13px;color:var(--t3)">No entries yet.</div>`;return;}
-  list.innerHTML=entries.map(([name,e])=>{
-    const chips=e.picks.map(t=>`<span class="plchip">${t.flag} ${t.name}</span>`).join("");
+  if(!dbEntries.length){list.innerHTML=`<div style="padding:14px;font-size:13px;color:var(--t3)">No entries yet.</div>`;return;}
+  list.innerHTML=dbEntries.map(e=>{
+    const chips=(e.picks||[]).map(t=>`<span class="plchip">${t.flag} ${t.name}</span>`).join("");
     return `<div class="plrow">
-      <span class="atn">${name}</span>
-      <label class="ptog" style="flex-shrink:0"><input type="checkbox" id="pd-${sid(name)}" ${e.paid?"checked":""}/><span style="font-size:12px;font-weight:600">💰</span></label>
-      <button class="delbtn" onclick="delEntry(${JSON.stringify(name)})"><i class="ti ti-trash" style="font-size:13px" aria-hidden="true"></i>Delete</button>
+      <span class="atn">${e.name}</span>
+      <label class="ptog" style="flex-shrink:0"><input type="checkbox" id="pd-${sid(e.name)}" ${e.paid?"checked":""}/><span style="font-size:12px;font-weight:600">💰</span></label>
+      <button class="delbtn" onclick="delEntry(${JSON.stringify(e.name)})">🗑 Delete</button>
       <div class="plchips">${chips}</div>
     </div>`;
   }).join("");
@@ -593,36 +610,57 @@ function renderAP(){
 
 async function delEntry(name){
   if(!confirm(`Delete entry for "${name}"? This cannot be undone.`))return;
-  delete ST.entries[name];
-  await ps("entries");
-  renderAP();
-  showMsg("plmsg","ok",`✅ "${name}" deleted.`);
+  try{
+    const r=await fetch(`${SB_URL}/rest/v1/entries?name=eq.${encodeURIComponent(name)}`,{
+      method:'DELETE',
+      headers:{...H,'Prefer':'return=representation'}
+    });
+    if(r.ok){
+      await loadAll();
+      renderAP();
+      showMsg("plmsg","ok",`✅ "${name}" deleted.`);
+    }else{
+      const err=await r.text();
+      showMsg("plmsg","err","Delete failed: "+err);
+    }
+  }catch(e){
+    showMsg("plmsg","err","Delete error: "+e.message);
+  }
 }
 
 function renderAE(){
   document.getElementById("elimlist").innerHTML=TEAMS.map(t=>`
     <div class="atr"><span style="font-size:18px">${t.flag}</span><span class="atn">${t.name}</span>
-      <label class="etog"><input type="checkbox" id="el-${sid(t.name)}" ${ST.elim[t.name]?"checked":""}/><span style="font-size:12px;color:var(--red);font-weight:600">Eliminated</span></label>
+      <label class="etog"><input type="checkbox" id="el-${sid(t.name)}" ${dbElim[t.name]?"checked":""}/><span style="font-size:12px;color:var(--red);font-weight:600">Eliminated</span></label>
     </div>`).join("");
 }
 
 async function saveScores(){
-  TEAMS.forEach(t=>{const id=sid(t.name);ST.scores[t.name]={w:parseInt(document.getElementById("sw-"+id)?.value)||0,d:parseInt(document.getElementById("sd-"+id)?.value)||0,l:parseInt(document.getElementById("sl-"+id)?.value)||0,gf:parseFloat(document.getElementById("sgf-"+id)?.value)||0};});
-  await ps("scores");showMsg("scmsg","ok","✅ Scores saved — leaderboard updated.");
-}
-async function saveKO(){
-  TEAMS.forEach(t=>{const id=sid(t.name);ST.ko[t.name]={r32:document.getElementById("ko-r32-"+id)?.checked?1:0,r16:document.getElementById("ko-r16-"+id)?.checked?1:0,qf:document.getElementById("ko-qf-"+id)?.checked?1:0,sf:document.getElementById("ko-sf-"+id)?.checked?1:0,champ:document.getElementById("ko-champ-"+id)?.checked?1:0};});
-  await ps("ko");showMsg("komsg","ok","✅ Knockout saved — leaderboard updated.");
-}
-async function savePaid(){
-  Object.keys(ST.entries).forEach(name=>{const el=document.getElementById("pd-"+sid(name));if(el)ST.entries[name].paid=el.checked;});
-  await ps("entries");showMsg("plmsg","ok","✅ Paid status saved.");
-}
-async function saveElim(){
-  TEAMS.forEach(t=>{const el=document.getElementById("el-"+sid(t.name));if(el)ST.elim[t.name]=el.checked;});
-  await ps("elim");showMsg("elimsg","ok","✅ Eliminated status saved.");
+  const data=TEAMS.map(t=>{const id=sid(t.name);return{team_name:t.name,w:parseInt(document.getElementById("sw-"+id)?.value)||0,d:parseInt(document.getElementById("sd-"+id)?.value)||0,l:parseInt(document.getElementById("sl-"+id)?.value)||0,gf:parseFloat(document.getElementById("sgf-"+id)?.value)||0};});
+  await sbUpsert('scores',data);await loadAll();
+  showMsg("scmsg","ok","✅ Scores saved — leaderboard updated.");
 }
 
-function renderAll(){buildFilters();renderRoster();renderList();updCap();renderDP();}
-load();
+async function saveKO(){
+  const data=TEAMS.map(t=>{const id=sid(t.name);return{team_name:t.name,r32:document.getElementById("ko-r32-"+id)?.checked?1:0,r16:document.getElementById("ko-r16-"+id)?.checked?1:0,qf:document.getElementById("ko-qf-"+id)?.checked?1:0,sf:document.getElementById("ko-sf-"+id)?.checked?1:0,champ:document.getElementById("ko-champ-"+id)?.checked?1:0};});
+  await sbUpsert('knockout',data);await loadAll();
+  showMsg("komsg","ok","✅ Knockout saved — leaderboard updated.");
+}
+
+async function savePaid(){
+  const updates=dbEntries.map(e=>{const el=document.getElementById("pd-"+sid(e.name));return{...e,paid:el?el.checked:e.paid};});
+  await sbUpsert('entries',updates);await loadAll();
+  showMsg("plmsg","ok","✅ Paid status saved.");
+}
+
+async function saveElim(){
+  const data=TEAMS.map(t=>({team_name:t.name,is_eliminated:document.getElementById("el-"+sid(t.name))?.checked||false}));
+  await sbUpsert('eliminated',data);await loadAll();
+  showMsg("elimsg","ok","✅ Eliminated status saved.");
+}
+
+function renderAll(){buildFilters();renderRoster();renderList();updCap();}
+loadAll().then(()=>{renderAll();renderLB();renderDP();});
 </script>
+</body>
+</html>
