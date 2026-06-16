@@ -383,8 +383,10 @@ function ftms(){sV=document.getElementById("tsearch").value.toLowerCase();render
 function setGrp(g,btn){gF=g;document.querySelectorAll(".fbn").forEach(b=>b.classList.remove("active"));btn.classList.add("active");renderList();}
 
 function buildFilters(){
+  const w=document.getElementById("gfilters");
+  if(!w)return;
   const gs=["ALL",...[...new Set(TEAMS.map(t=>t.group))].sort()];
-  const w=document.getElementById("gfilters");w.innerHTML="";
+  w.innerHTML="";
   gs.forEach(g=>{const b=document.createElement("button");b.className="fbn"+(g==="ALL"?" active":"");b.textContent=g==="ALL"?"All":"Group "+g;b.onclick=()=>setGrp(g,b);w.appendChild(b);});
 }
 
@@ -398,7 +400,7 @@ function getSorted(list){
 }
 
 function renderList(){
-  const list=document.getElementById("tlist");
+  const list=document.getElementById("tlist");if(!list)return;
   const total=dbEntries.length;
   const cnts={};dbEntries.forEach(e=>{(e.picks||[]).forEach(p=>{cnts[p.name]=(cnts[p.name]||0)+1;});});
   const filtered=TEAMS.filter(t=>(gF==="ALL"||t.group===gF)&&(!sV||t.name.toLowerCase().includes(sV)));
@@ -430,7 +432,7 @@ function tog(t){
 }
 
 function renderRoster(){
-  const w=document.getElementById("rslots");w.innerHTML="";
+  const w=document.getElementById("rslots");if(!w)return;w.innerHTML="";
   for(let i=0;i<MAX;i++){
     const t=picks[i];const d=document.createElement("div");
     d.className="slot"+(t?" filled":"");
